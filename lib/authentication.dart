@@ -6,6 +6,7 @@ class Authentication {
   List<String> _roles;
 
   int get id => _id;
+
   String get name => _name;
 
   Authentication(this._id, this._name, this._roles);
@@ -13,5 +14,4 @@ class Authentication {
   bool validateRole(String role) {
     return _roles.where((element) => element == role).toList().isNotEmpty;
   }
-
 }

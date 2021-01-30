@@ -1,7 +1,7 @@
 name: authentication_widget
 description: An Authentication Widget that shows content depending on the current role using the app
-version: 0.1.2
-homepage: https://lucianojung.de
+version: 0.1.3
+homepage: https://github.com/lucianojung/authentication_widget
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

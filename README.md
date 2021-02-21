@@ -1,6 +1,8 @@
 # authentication_widget
 An Authentication Widget that shows content depending on the current role using the app
 
+![example video](assets/authentication_widget_example.gif)
+
 ## Getting Started
 
 #### Use this package as a library

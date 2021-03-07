@@ -10,11 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  tuple: ^1.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  tuple: ^1.0.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

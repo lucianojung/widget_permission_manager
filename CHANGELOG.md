@@ -15,3 +15,6 @@
 
 ## [0.1.4] - 21.11.2020
 - update Changelog
+
+## [1.0.0] - 07.03.2021
+- Clarification of the naming (authorization widget to control widget children)

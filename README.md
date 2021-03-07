@@ -1,7 +1,7 @@
 # authentication_widget
-An Authentication Widget that shows content depending on the current role using the app
+A Widget to control the child widget based on the accessing role using the app.
 
-![example video](assets/authentication_widget_example.gif)
+![example video](assets/authorization_widget_example.gif)
 
 ## Getting Started
 
@@ -29,14 +29,14 @@ import 'package:authentication_widget/authentication_widget.dart';
 ```
 
 ## Example
-![example admin panel](assets/authentication_widget_example_admin_panel.png)
-![example guest panel](assets/authentication_widget_example_guest_panel.png)
+![example admin panel](assets/authorization_widget_example_admin_panel.png)
+![example guest panel](assets/authorization_widget_example_guest_panel.png)
 
 ```
 library authentication_widget;
 
-import 'package:authentication_widget/authentication.dart';
-import 'package:authentication_widget/authentication_widget.dart';
+import 'package:authentication_widget/authorization.dart';
+import 'package:authentication_widget/authorization_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // title of the app
-      title: 'Authentication Widget Demo',
+      title: 'Authorization Widget Demo',
       // home page of the app
       home: MyHomePage(),
     );
@@ -67,8 +67,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // set default role for the user
   String _role = 'Admin';
-  // create an authentication object
-  Authentication _authentication = Authentication(0, 'Admin only', ['Admin']);
+  // create an Authorization object
+  Authorization _authorization = Authorization(0, 'Admin only', ['Admin']);
 
   @override
   Widget build(BuildContext context) {
@@ -82,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
               'Your current role is $_role',
               style: Theme.of(context).textTheme.headline6,
             ),
-            // uses Authentication Widget to evaluate shown information
+            // uses Authorization Widget to evaluate shown information
             // set Duration if you want slower or faster switch, if role changed
-            AuthenticationWidget(
+            AuthorizationWidget(
               // give role
               // you usually get this from a user- or role-service
               role: _role,
-              // give authentication to validate
-              auth: _authentication,
+              // give authorization to validate
+              auth: _authorization,
               // set child shown if validation is approved
               child: Text(
                 'Admin Information',

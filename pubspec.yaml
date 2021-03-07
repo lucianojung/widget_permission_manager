@@ -1,5 +1,5 @@
 name: authentication_widget
-description: An Authentication Widget that shows content depending on the current role using the app
+description: A Widget to control the child widget based on the accessing role using the app.
 version: 0.1.4
 homepage: https://github.com/lucianojung/authentication_widget
 

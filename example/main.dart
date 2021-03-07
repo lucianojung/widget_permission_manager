@@ -1,7 +1,7 @@
 library authentication_widget;
 
-import 'package:authentication_widget/authentication.dart';
-import 'package:authentication_widget/authentication_widget.dart';
+import 'package:authentication_widget/authorization.dart';
+import 'package:authentication_widget/authorization_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // title of the app
-      title: 'Authentication Widget Demo',
+      title: 'Authorization Widget Demo',
       // home page of the app
       home: MyHomePage(),
     );
@@ -32,8 +32,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // set default role for the user
   String _role = 'Admin';
-  // create an authentication object
-  Authentication _authentication = Authentication(0, 'Admin only', ['Admin']);
+  // create an Authorization object
+  Authorization _authorization = Authorization(0, 'Admin only', ['Admin']);
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
               'Your current role is $_role',
               style: Theme.of(context).textTheme.headline6,
             ),
-            // uses Authentication Widget to evaluate shown information
+            // uses Authorization Widget to evaluate shown information
             // set Duration if you want slower or faster switch, if role changed
-            AuthenticationWidget(
+            AuthorizationWidget(
               // give role
               // you usually get this from a user- or role-service
               role: _role,
-              // give authentication to validate
-              auth: _authentication,
+              // give authorization to validate
+              auth: _authorization,
               // set child shown if validation is approved
               child: Text(
                 'Admin Information',
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       // Button to switch roles
-      floatingActionButton: RaisedButton(
+      floatingActionButton: ElevatedButton(
         // onPressed event
         onPressed: _switchRole,
         // tesxt of the button

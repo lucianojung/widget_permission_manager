@@ -2,16 +2,16 @@ library authentication_widget;
 
 import 'package:flutter/material.dart';
 
-import 'authentication.dart';
+import 'authorization.dart';
 
-class AuthenticationWidget extends StatelessWidget {
-  final Authentication auth;
+class AuthorizationWidget extends StatelessWidget {
+  final Authorization auth;
   final String role;
   final Duration duration;
   final Widget child;
   final Widget alternateChild; //optional
 
-  AuthenticationWidget(
+  AuthorizationWidget(
       {this.auth, this.role, this.duration, this.child, this.alternateChild});
 
   @override

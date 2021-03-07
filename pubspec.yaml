@@ -1,7 +1,7 @@
 name: widget_permission_manager
 description: A Widget to control the child widget based on the accessing role using the app.
-version: 0.1.4
-homepage: https://github.com/lucianojung/authentication_widget
+version: 1.0.0
+homepage: https://github.com/lucianojung/widget_permission_manager
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

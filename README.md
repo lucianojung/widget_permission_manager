@@ -25,7 +25,7 @@ $ flutter pub get
 3. Import it
 Now in your Dart code, you can use:
 ```
-import 'package:authentication_widget/authentication_widget.dart';
+import 'package:widget_permission_manager/widget_permission_manager.dart';
 ```
 
 ## Example
@@ -33,10 +33,10 @@ import 'package:authentication_widget/authentication_widget.dart';
 ![example guest panel](assets/authorization_widget_example_guest_panel.png)
 
 ```
-library authentication_widget;
+library widget_permission_manager;
 
-import 'package:authentication_widget/authorization.dart';
-import 'package:authentication_widget/authorization_widget.dart';
+import 'package:widget_permission_manager/authorization.dart';
+import 'package:widget_permission_manager/authorization_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {

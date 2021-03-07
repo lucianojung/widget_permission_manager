@@ -2,19 +2,19 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:widget_permission_manager/authorization.dart';
 
 void main() {
-  test('test Authentication creation', () {
-    final authentication =
-        Authorization(0, 'Authentication', ['Role1', 'Role2']);
+  test('test Authorization creation', () {
+    final authorization =
+        Authorization(0, 'Authorization', ['Role1', 'Role2']);
 
-    expect(authentication.id, 0);
-    expect(authentication.name, 'Authentication');
+    expect(authorization.id, 0);
+    expect(authorization.name, 'Authorization');
   });
 
   test('test Role validation', () {
-    final authentication =
-        Authorization(0, 'Authentication', ['Role1', 'Role2']);
+    final authorization =
+        Authorization(0, 'Authorization', ['Role1', 'Role2']);
 
-    expect(authentication.validateRole('Role1'), true);
-    expect(authentication.validateRole('Role3'), false);
+    expect(authorization.validateRole('Role1'), true);
+    expect(authorization.validateRole('Role3'), false);
   });
 }

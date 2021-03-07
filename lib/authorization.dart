@@ -1,5 +1,3 @@
-library authentication_widget;
-
 class Authorization {
   int _id;
   String _name;

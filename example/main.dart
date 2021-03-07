@@ -1,8 +1,6 @@
-library authentication_widget;
-
-import 'package:authentication_widget/authorization.dart';
-import 'package:authentication_widget/authorization_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:widget_permission_manager/authorization.dart';
+import 'package:widget_permission_manager/authorization_widget.dart';
 
 void main() {
   runApp(MyApp());

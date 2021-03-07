@@ -1,5 +1,3 @@
-library authentication_widget;
-
 import 'package:flutter/material.dart';
 
 import 'authorization.dart';

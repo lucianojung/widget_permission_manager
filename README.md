@@ -1,4 +1,4 @@
-# authentication_widget
+# widget_permission_manager
 A Widget to control the child widget based on the accessing role using the app.
 
 ![example video](assets/authorization_widget_example.gif)
@@ -10,7 +10,7 @@ A Widget to control the child widget based on the accessing role using the app.
 Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  authentication_widget: ^0.1.1
+  widget_permission_manager: ^0.1.1
 ```
 
 2. Install it

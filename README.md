@@ -1,7 +1,7 @@
 # widget_permission_manager
 A Widget to control the child widget based on the accessing role using the app.
 
-![example video](assets/authorization_widget_example.gif)
+<img src="assets/authorization_widget_example.gif" height="600">
 
 ## Getting Started
 
@@ -29,8 +29,10 @@ import 'package:widget_permission_manager/widget_permission_manager.dart';
 ```
 
 ## Example
-![example admin panel](assets/authorization_widget_example_admin_panel.png)
-![example guest panel](assets/authorization_widget_example_guest_panel.png)
+<div>
+  <img src="assets/authorization_widget_example_admin_panel.png" height="600">
+  <img src="assets/authorization_widget_example_guest_panel.png" height="600">
+</div>
 
 ```
 library widget_permission_manager;

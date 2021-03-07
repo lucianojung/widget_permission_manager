@@ -35,11 +35,10 @@ import 'package:widget_permission_manager/widget_permission_manager.dart';
 </div>
 
 ```
-library widget_permission_manager;
-
+import 'package:flutter/material.dart';
+import 'package:tuple/tuple.dart';
 import 'package:widget_permission_manager/authorization.dart';
 import 'package:widget_permission_manager/authorization_widget.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
@@ -69,8 +68,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // set default role for the user
   String _role = 'Admin';
+
   // create an Authorization object
-  Authorization _authorization = Authorization(0, 'Admin only', ['Admin']);
+  Authorization _authorizationAdmin = Authorization(0, 'Admin only', ['Admin']);
+  Authorization _authorizationAll = Authorization(0, 'Guest', ['Admin', 'Guest']);
 
   @override
   Widget build(BuildContext context) {
@@ -90,39 +91,43 @@ class _MyHomePageState extends State<MyHomePage> {
               // give role
               // you usually get this from a user- or role-service
               role: _role,
-              // give authorization to validate
-              auth: _authorization,
-              // set child shown if validation is approved
-              child: Text(
-                'Admin Information',
-                style: Theme.of(context).textTheme.headline4,
-                textAlign: TextAlign.center,
-              ),
-              // set alternativeChild shown if validation fails
-              // if no alternateChild is set it is been replaced with a SizedBox()
-              alternateChild: Text(
-                'Guest Information',
-                style: Theme.of(context).textTheme.headline4,
-                textAlign: TextAlign.center,
-              ),
+              // set children shown if validation is approved
+              children: [
+                Tuple2(
+                  _authorizationAdmin,
+                  Text(
+                    'Admin Information',
+                    style: Theme.of(context).textTheme.headline4,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Tuple2(
+                  _authorizationAll,
+                  Text(
+                    'Guest Information',
+                    style: Theme.of(context).textTheme.headline4,
+                    textAlign: TextAlign.center,
+                  ),
+                )
+              ],
             ),
           ],
         ),
       ),
       // Button to switch roles
-      floatingActionButton: RaisedButton(
+      floatingActionButton: ElevatedButton(
         // onPressed event
         onPressed: _switchRole,
         // tesxt of the button
         child: Text('Switch Role'),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 
   void _switchRole() {
     setState(() {
       // change between roles Admin and Guest
-      _role = _role == 'Admin' ? 'Guest' : 'Admin';
+      _role = _role == 'Admin' ? 'Dev' : 'Admin';
     });
   }
 }

@@ -18,3 +18,6 @@
 
 ## [1.0.0] - 07.03.2021
 - Clarification of the naming (authorization widget to control widget children)
+
+## [1.1.0] - 07.03.2021
+- add Multiple Authorization

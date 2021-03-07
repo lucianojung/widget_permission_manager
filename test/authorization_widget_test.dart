@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tuple/tuple.dart';
 import 'package:widget_permission_manager/authorization.dart';
 import 'package:widget_permission_manager/authorization_widget.dart';
 
@@ -13,8 +14,7 @@ void main() {
     Widget child = SizedBox();
     Duration duration = Duration(milliseconds: 100);
     final authWidget = AuthorizationWidget(
-      child: child,
-      auth: auth,
+      children: [Tuple2(auth, child)],
       role: role,
     );
 

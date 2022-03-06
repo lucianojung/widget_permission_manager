@@ -12,7 +12,7 @@ void main() {
         Authorization(0, 'Authorization', ['Role1', 'Role2']);
     String role = 'Role1';
     Widget child = SizedBox();
-    Duration duration = Duration(milliseconds: 100);
+    // Duration duration = Duration(milliseconds: 100);
     final authWidget = AuthorizationWidget(
       children: [Tuple2(auth, child)],
       role: role,

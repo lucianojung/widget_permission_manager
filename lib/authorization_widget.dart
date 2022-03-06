@@ -24,8 +24,7 @@ class AuthorizationWidget extends StatelessWidget {
       this.switchInCurve,
       this.switchOutCurve,
       this.reverseDuration})
-      : assert(role != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -21,3 +21,6 @@
 
 ## [1.1.0] - 07.03.2021
 - add Multiple Authorization
+
+## [2.0.0] - 06.03.2022
+- added Support for Null-Safety

@@ -28,10 +28,12 @@ class AuthorizationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// handles the AuthorizationWidget with an AnimatedSwitcher to switch between the widgets of different authorizations
     return AnimatedSwitcher(
       key: key ?? GlobalKey(),
       transitionBuilder:
-          transitionBuilder as Widget Function(Widget, Animation<double>)? ?? AnimatedSwitcher.defaultTransitionBuilder,
+          transitionBuilder as Widget Function(Widget, Animation<double>)? ??
+              AnimatedSwitcher.defaultTransitionBuilder,
       layoutBuilder: layoutBuilder ?? AnimatedSwitcher.defaultLayoutBuilder,
       duration: duration != null ? duration! : Duration(milliseconds: 500),
       reverseDuration: reverseDuration ?? Duration(milliseconds: 500),
@@ -42,10 +44,12 @@ class AuthorizationWidget extends StatelessWidget {
   }
 
   _getWidget() {
-    List<Tuple2<Authorization, Widget>> widget =
-        children.where((element) => element.item1.validateRole(role)).toList();
-    return widget.isNotEmpty
-        ? widget[0].item2
-        : SizedBox();
+    /// gets the first widget matching the roles authorization or Else an empty SizedBox
+    Tuple2<Authorization, Widget> orElse =
+        Tuple2(Authorization(-1, '', []), SizedBox());
+    return children
+        .firstWhere((element) => element.item1.validateRole(role),
+            orElse: () => orElse)
+        .item2;
   }
 }

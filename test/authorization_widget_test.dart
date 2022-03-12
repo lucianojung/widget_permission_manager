@@ -8,8 +8,7 @@ void main() {
   testWidgets('My Widget has a child and a duration',
       (WidgetTester tester) async {
     // Create the widget by telling the tester to build it.
-    Authorization auth =
-        Authorization(0, 'Authorization', ['Role1', 'Role2']);
+    Authorization auth = Authorization(0, 'Authorization', ['Role1', 'Role2']);
     String role = 'Role1';
     Widget child = SizedBox();
     // Duration duration = Duration(milliseconds: 100);

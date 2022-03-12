@@ -27,3 +27,6 @@
 
 ## [2.0.1] - 12.03.2022
 - role is now of type dynamic
+
+## [2.0.2] - 12.03.2022
+- comment and reformat code

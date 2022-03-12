@@ -34,7 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // create an Authorization object
   Authorization _authorizationAdmin = Authorization(0, 'Admin only', ['Admin']);
-  Authorization _authorizationAll = Authorization(0, 'Guest', ['Admin', 'Guest']);
+  Authorization _authorizationAll =
+      Authorization(0, 'Guest', ['Admin', 'Guest']);
 
   @override
   Widget build(BuildContext context) {

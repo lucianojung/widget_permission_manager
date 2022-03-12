@@ -10,6 +10,7 @@ class Authorization {
   Authorization(this._id, this._name, this._roles);
 
   bool validateRole(dynamic role) {
+    /// validates that there is a role matching with this Authorization
     return _roles.where((element) => element == role).toList().isNotEmpty;
   }
 }

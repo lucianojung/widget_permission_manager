@@ -10,7 +10,7 @@ A Widget to control the child widget based on the accessing role using the app.
 Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  widget_permission_manager: ^2.0.1
+  widget_permission_manager: ^2.0.2
 ```
 
 2. Install it

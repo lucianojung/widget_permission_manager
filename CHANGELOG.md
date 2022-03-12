@@ -24,3 +24,6 @@
 
 ## [2.0.0] - 06.03.2022
 - added Support for Null-Safety
+
+## [2.0.1] - 12.03.2022
+- role is now of type dynamic

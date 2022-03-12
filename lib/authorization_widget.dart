@@ -6,7 +6,7 @@ import 'authorization.dart';
 class AuthorizationWidget extends StatelessWidget {
   final Key? key;
   final List<Tuple2<Authorization, Widget>> children;
-  final String role;
+  final dynamic role;
   final Duration? duration;
   final Duration? reverseDuration;
   final Curve? switchInCurve;
